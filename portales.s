@@ -1,7 +1,11 @@
 .data
 DP :  .word 0x00000000
 .text 
-
+#La funcion dibujarPortal2 toma como entrada:
+# t1: colorPortal2 / colorPortal3 
+# Se aplica la formula (((columna*32)+filas)*4) para pintar los portales en las posiciones, 14,38 y 26,8
+# de los colores colorPortal2 y colorPortal3 respectivamente.
+#La salida es: las casillas 14,28 y 26,8 pintadas de colorPortal2 y colorPortal3 en el tablero.
 dibujarPortal2:
     #Prologo
     sw $fp ($sp)

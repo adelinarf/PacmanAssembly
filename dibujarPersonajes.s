@@ -1,5 +1,10 @@
 .data
 .text
+#La funcion toma como entrada:
+#Las variables posicionesPersonajes, colorBlinky, colorInky, colorClyde, colorPinky, colorPacman
+#Se busca la posicion de los personajes que son 7, 27; 9,27; 8,27, 6,27 y 20,14, en las cuales se le 
+#asigna los colores respectivos en posicionesPersonajes 8, 16, 12, 4, 0, respectivamente.
+#La salida es que los personajes son pintados en las posiciones 20,14; 6,27; 7,27; 8,27; 9,27.
 dibujarPersonajes:
         #Prologo
         sw $fp ($sp)

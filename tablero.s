@@ -4,6 +4,14 @@ buffer: .space 1
 line: .space 1024
 D1 : .word 0x00000000
 .text
+#La funcion tablero toma como entrada:
+# a0: archivo tablero.txt en la variable fin
+#Se llama a al funcion dibujarPortal2 para pintar los portales, posteriormente se lee el archivo en loop,
+de manera que va moviendose segun las direcciones del archivo en columna y fila, para poder armar el tablero.
+Para ello, llama a las funciones cconstruirTablero que se encarga de abrir el archivo, read_loop que lee el 
+archivo, consume_line que se encarga de moverse por lineas del archivo y read_done que termina la leída. 
+Mientras que salta, columna, columna2 y modificarMatriz se encargan de ir pintando las paredes del tablero.
+#La salida de la funcion es el tablero con sus paredes pintadas.
 tablero:
     #Prologo
     sw $fp ($sp)

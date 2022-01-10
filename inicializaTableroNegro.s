@@ -1,5 +1,9 @@
 .data
 .text
+#La funcion inicializaTableroNegro toma como entrada:
+# t2: colorNegro
+#Se pinta de color negro todo el tablero llamando a las funciones inicializarNegro y finalizarNegro.
+#La salida de la funcion es todo el tablero pintado colorNegro.
 inicializaTableroNegro:
      #Prologo
      sw $fp ($sp)

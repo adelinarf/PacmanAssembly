@@ -6,6 +6,13 @@ posicionesY_WO : .word 15, 16, 17, 15, 17, 15, 17, 15, 17, 15, 16, 17 #12 tamano
 posicionesX_N : .word 10, 11, 12, 13, 14, 11, 12, 13, 10, 11, 12, 13, 14
 posicionesY_N : .word 19, 19, 19, 19, 19, 20, 21, 21, 22, 22, 22, 22, 22 #13 tamano
 .text
+#La funcion toma como entrada:
+#$a0 : colorGanado
+#Se encarga de pintar el tablero del ganador con la formula addr = baseAddress + (rowIndex * colSize + colIndex)*datasize
+#para ello se llama a la funcion pintarW que con las direccions de posicionesX_W y posicionesY_W para realizar las
+#operaciones de la formula anterior y pintando con el colorGanado y despues se reinician las variables en pintaW2. Se aplica el mismo
+#procedimiento para las demas letras con sus funciones correspondientes. Al final se llama a la funcion pintarGanado la cual termina de 
+#pintar el resto del tablero.
 dibujaWon:
     #Prologo
     sw $fp ($sp)

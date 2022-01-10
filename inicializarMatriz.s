@@ -1,5 +1,11 @@
 .data
 .text
+#La funcion toma como entrada:
+#$t2: colorComida
+#Se encarga pintar en el tablero todo del colorComida. Para ello se llama a la funcion 
+#inicializa que se encarga de colorear bit a bit de la matriz donde esta el tablero hasta que 
+#este esta completamente pintado y se llama a la funcion finalInicializar.
+#La salida es: el tablero toatalmente pintado de colorComida.
 inicializarMatriz:
      #Prologo
      sw $fp ($sp)

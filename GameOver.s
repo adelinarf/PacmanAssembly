@@ -1,5 +1,13 @@
 .data
 .text
+#La funcion GameOver toma como entrada:
+#$a0: teclaPresionada
+#Las variables V, puntos, seguir
+#La funcion salta a inicializarMatriz y dibujaLost. Posteriormente, se llama a la funcion esperandoEntrada
+#que de verificar si la tecla presionada indica para reiniciar el juego o salir del juego. Para la primera
+#se llama a la funcion reiniciarNuevoJuego donde se reinicia teclaPresionada, V y puntos. En el segundo
+#caso se llama a funcion terminaJuego que reinicia la variable seguir, despues se va a la funcion reiniciarNuevoJuego
+# y se llama a reiniciarJuegoPerdido.
 GameOver:
      #Prologo
      sw $fp ($sp)

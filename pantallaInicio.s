@@ -13,6 +13,11 @@
     letraSy: .word 14, 15, 16, 14, 14, 15, 16, 16, 14, 15, 16
     colorS : .word 0x00FEF016
 .text
+#La funcion pantallaInicio salta a la funcion inicializaTablero Negro y despues va coloreando de colorS
+#las letras de la pantalla Inicial segun las direcciones x, y correspondientes de las variables Inicializadas.
+#Para ello se llama a las funciones pintarPInicio, despuesP, pintarAInicio, despuesA, pintarCInicio, despuesC,
+#pintarMInicio, despuesM, pintarNInicio, despuesN, pintarSInicio y pintarSInicio
+#La salida de la funcion es la pantalla Inicial con las letras de PACMAN.
 pantallaInicio:
     #Prologo
     sw $fp ($sp)
