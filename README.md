@@ -5,7 +5,7 @@ terminar el juego con la tecla q en cualquier momento del juego y una vez ganado
 el juego presiona r para reiniciar el juego y q para finalizar.
 Al ganar el juego no es necesario presionar ninguna tecla, ya que, se reinicia de 
 manera automatica.
-El bitmap display debe tener las siguientes especificaciones:
+El bitmap display de Mars debe tener las siguientes especificaciones:
 Unit Width in Pixels = 16
 Unit Height in Pixels = 16
 Display Width in Pixels = 512
