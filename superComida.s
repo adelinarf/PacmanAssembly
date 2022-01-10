@@ -5,8 +5,8 @@ p :  .word 0x00000000
 #Recibe como entrada:
 # t1: colorSuperComida
 #Se pintan las casillas 21,28 ; 21,4 ; 4,4 ; 4,28, lo cual se hace con las operaciones ((columna*32)+fila)*4 para 
-cada uno de los portales. Tambien llama a las funciones, pastillita2, pastillita3 y pastillita4 que se encargan
-de pintar sucesivamente las otras super comidas.
+#cada uno de los portales. Tambien llama a las funciones, pastillita2, pastillita3 y pastillita4 que se encargan
+#de pintar sucesivamente las otras super comidas.
 #La salida es las casillas 21,28 ; 21,4 ; 4,4 ; 4,28, pintadas de colorSuperComida en el Tablero.
 pastillita1:
 #Aparece pastilla en  21,28

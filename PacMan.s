@@ -112,9 +112,9 @@ moverArriba:
         lw $s7, ($s6)
         
         lw $a0 colorNegro
-        beq $s7, $a0, movArriba  
+        beq $s7, $a0, movPacman  
         lw $a0 colorComida
-        beq $s7, $a0, movArribaSumar  
+        beq $s7, $a0, movPacmanSumar  
         lw $a0 colorPortal2
         beq $s7, $a0, movhacia3
         lw $a0 colorPortal3
@@ -191,7 +191,7 @@ movhacia2:
         nop
         
 #Esta etiqueta mueve a Pacman en los casos en que el tablero no cuenta con ningun tipo de comida ni superComida.
-movArriba:
+movPacman:
         lw $a0, colorNegro
         sw $a0, ($s4)  
         lw $a0, colorPacman
@@ -202,7 +202,7 @@ movArriba:
 
 #Esta etiqueta mueve a Pacman en los casos en que come la comida del tablero. Ademas suma 1 punto por cada cuadro de comida
 #que come y los guarda en puntos.
-movArribaSumar:
+movPacmanSumar:
         lw $a0 colorNegro
         sw $a0, ($s4) 
         lw $a0 colorPacman
@@ -227,9 +227,9 @@ moverAbajo:
         lw $s7, ($s6)
         
         lw $a0 colorNegro
-        beq $s7, $a0, movArriba 
+        beq $s7, $a0, movPacman 
         lw $a0 colorComida
-        beq $s7, $a0, movArribaSumar 
+        beq $s7, $a0, movPacmanSumar 
         lw $a0 colorPortal2
         beq $s7, $a0, movhacia3
         lw $a0 colorPortal3
@@ -251,9 +251,9 @@ moverIzquierda:
         lw $s7, ($s6)
         
         lw $a0 colorNegro
-        beq $s7, $a0, movArriba 
+        beq $s7, $a0, movPacman 
         lw $a0 colorComida
-        beq $s7, $a0, movArribaSumar
+        beq $s7, $a0, movPacmanSumar
         lw $a0 colorPortal2
         beq $s7, $a0, movhacia3
         lw $a0 colorPortal3
@@ -274,9 +274,9 @@ moverDerecha:
         lw $s7, ($s6)
         
         lw $a0 colorNegro
-        beq $s7, $a0, movArriba 
+        beq $s7, $a0, movPacman 
         lw $a0 colorComida
-        beq $s7, $a0, movArribaSumar 
+        beq $s7, $a0, movPacmanSumar 
         lw $a0 colorPortal2
         beq $s7, $a0, movhacia3
         lw $a0 colorPortal3

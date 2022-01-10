@@ -1,4 +1,5 @@
 	.data
+# Autores: Adelina Figueira 15-10484 y Ana Santos 17-10602
 #                                Variables utilizadas en el codigo
 # seguir : Es un byte que indica si el ciclo principal del juego sigue 1 o termina 0.
 # C : Es una variable que se utiliza para la conversion de ticks del reloj, se debe introducir la velocidad del procesador en Ghz.
@@ -31,7 +32,7 @@
 # puntos: Esta variable aloja el numero de puntos que tiene el jugador.
 #
 seguir:	.byte 1
-C: .word 3 #velocidad del procesador en Ghz
+C: .word 3
 teclaPresionada : .word 87
 MAT : .word 0x10008000
 S : .word 1
@@ -55,7 +56,7 @@ colorInky: .word 0x0003A9F4 #tantasma azul
 colorGameOver : .word 0x00FF6241
 colorGanado: .word 0x006FEC50
 pausar: .word 0
-puntosAGanar: .word 576
+puntosAGanar: .word 571
 reiniciar: .word 0
 .align 2
 arriba: .asciiz "A"
@@ -154,3 +155,4 @@ Salir:
 .include "inicializaTableroNegro.s"
 .include "dibujarWon.s"
 .include "reiniciarFantasma.s"
+.include "portales.s"

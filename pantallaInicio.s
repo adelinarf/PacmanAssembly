@@ -173,8 +173,13 @@ esperarTeclado:
      lw $a0 teclaPresionada
      beq $a0 83 nuevoJuego
      beq $a0 115 nuevoJuego
+     beq $a0 81 terminarJuegoInicio
+     beq $a0 113 terminarJuegoInicio
      j esperarTeclado
      nop 
+terminarJuegoInicio:
+    li $v0 10
+    syscall
 nuevoJuego:    
     #Epilogo
     move $sp $fp
